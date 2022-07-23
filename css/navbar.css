@@ -39,6 +39,7 @@ nav .nav-bar .logo a {
   font-weight: 500;
   color: var(--text-color);
   text-decoration: none;
+  pointer-events: none;
 }
 
 .menu .logo-toggle {
