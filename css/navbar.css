@@ -8,11 +8,6 @@ nav {
   z-index: 100;
 }
 
-body.dark nav {
-  border: 1px solid #393838;
-
-}
-
 nav .nav-bar {
   position: relative;
   height: 100%;
@@ -24,14 +19,108 @@ nav .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav .nav-bar .sidebarOpen {
-  color: var(--text-color);
-  font-size: 25px;
-  padding: 5px;
+nav .nav-bar .hamburger {
   cursor: pointer;
   display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger .bar{
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  border-radius: 3px;
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 0;
+  transition: all .6s;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+}
+
+.hamburger span:first-child{
+  transform: translateY(-10px);
+  animation-name: rotate-base-1;
+}
+
+.hamburger.active span:first-child{
+  animation-name: rotate-1;
+}
+
+.hamburger span:last-child{
+  transform: translateY(10px);
+  animation-name: rotate-base-2;
+}
+
+.hamburger.active span:last-child{
+  animation-name: rotate-2;
+}
+
+.hamburger.active span:nth-child(2){
+  opacity: 0;
+  transform: scale(0);
+}
+
+@keyframes rotate-1{
+  0%{
+    transform: translateY(-10px);
+  }
+  
+  50%{
+    transform: translateY(0);
+  }
+  
+  100%{
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes rotate-base-1{
+  0%{
+    transform: translateY(0) rotate(-45deg);
+  }
+  
+  50%{
+    transform: rotate(0deg);
+  }
+  
+  100%{
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate-2{
+  0%{
+    transform: translateY(10px);
+  }
+  
+  50%{
+    transform: translateY(0);
+  }
+  
+  100%{
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes rotate-base-2{
+  0%{
+    transform: translateY(0) rotate(45deg);
+  }
+  
+  50%{
+    transform: rotate(0deg);
+  }
+  
+  100%{
+    transform: translateY(10px);
+  }
 }
 
 nav .nav-bar .logo a {
@@ -40,10 +129,6 @@ nav .nav-bar .logo a {
   color: var(--text-color);
   text-decoration: none;
   pointer-events: none;
-}
-
-.menu .logo-toggle {
-  display: none;
 }
 
 .nav-bar .nav-links {
@@ -83,13 +168,13 @@ nav .nav-bar .logo a {
   opacity: 1;
 }
 
-.nav-bar .darkLight-searchBox {
+.nav-bar .cartToggle-searchBox {
   display: flex;
   align-items: center;
 }
 
-.darkLight-searchBox .dark-light,
-.darkLight-searchBox .searchToggle {
+.cartToggle-searchBox .cartToggle,
+.cartToggle-searchBox .searchToggle {
   height: 40px;
   width: 40px;
   display: flex;
@@ -98,28 +183,13 @@ nav .nav-bar .logo a {
   margin: 0 5px;
 }
 
-.dark-light i,
+.cartToggle i,
 .searchToggle i {
   position: absolute;
   color: var(--text-color);
   font-size: 22px;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-
-.dark-light i.sun {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.dark-light.active i.sun {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.dark-light.active i.moon {
-  opacity: 0;
-  pointer-events: none;
 }
 
 .searchToggle i.cancel {
@@ -158,7 +228,7 @@ nav .nav-bar .logo a {
   transition: all 0.3s ease;
 }
 
-.searchToggle.active~.search-field {
+.searchToggle.active ~ .search-field {
   bottom: -74px;
   opacity: 1;
   pointer-events: auto;
@@ -189,9 +259,6 @@ nav .nav-bar .logo a {
   background-color: var(--search-bar);
 }
 
-body.dark .search-field input {
-  color: var(--text-color);
-}
 
 .search-field i {
   position: absolute;
@@ -201,8 +268,8 @@ body.dark .search-field input {
   cursor: pointer;
 }
 
-body.dark .search-field i {
-  color: var(--text-color);
+#searchBox{
+  display: none;
 }
 
 @media (max-width: 790px) {
@@ -210,7 +277,15 @@ body.dark .search-field i {
     padding: 0 20px;
   }
   
-  nav .nav-bar .sidebarOpen {
+  .nav-links li a::before{
+    display: none;
+  }
+  
+  .search-field input{
+    z-index: 99;
+  }
+  
+  nav .nav-bar .hamburger {
     display: block;
   }
   
@@ -220,46 +295,74 @@ body.dark .search-field i {
   
   .menu {
     position: fixed;
-    height: 100%;
-    width: 320px;
+    height: auto;
+    width: 100%;
     left: -100%;
-    top: 0;
+    top: 50px;
     padding: 20px;
     background-color: var(--side-nav);
-    z-index: 100;
+    z-index: 90;
     transition: all 0.4s ease;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   }
 
   nav.active .menu {
     left: -0%;
   }
 
-  nav.active .nav-bar .navLogo a {
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-
-  .menu .logo-toggle {
-    display: block;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo-toggle .siderbarClose {
-    color: var(--text-color);
-    font-size: 24px;
-    cursor: pointer;
-  }
-
   .nav-bar .nav-links {
-    flex-direction: column;
-    padding-top: 30px;
+    display: block;
+    border-top: 2px solid #eee;
   }
 
   .nav-links li a {
     display: block;
-    margin-top: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  #searchBox{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  #searchBox .searchBlock{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links .searchBlock input{
+    height: 40px;
+    width: 100%;
+    margin-top: 5px;
+    padding: 0 45px 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--search-text);
+    background-color: var(--search-bar);
+  }
+  
+  .nav-links .searchBlock i{
+    position: absolute;
+    color: var(--nav-color);
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .searchBox{
+    display: none;
   }
 }
