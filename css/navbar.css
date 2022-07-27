@@ -168,108 +168,25 @@ nav .nav-bar .logo a {
   opacity: 1;
 }
 
-.nav-bar .cartToggle-searchBox {
-  display: flex;
-  align-items: center;
-}
-
-.cartToggle-searchBox .cartToggle,
-.cartToggle-searchBox .searchToggle {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-}
-
-.cartToggle i,
-.searchToggle i {
-  position: absolute;
-  color: var(--text-color);
-  font-size: 22px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.searchToggle i.cancel {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.searchToggle.active i.cancel {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.searchToggle.active i.search {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.searchBox {
+.cartToggle a{
+  height: 35px;
+  width: 35px;
+  display: block;
   position: relative;
 }
 
-.searchBox .search-field {
-  position: absolute;
-  bottom: -85px;
-  right: 5px;
-  height: 50px;
-  width: 300px;
-  display: flex;
-  align-items: center;
-  background-color: var(--nav-color);
-  padding: 3px;
-  border-radius: 6px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-
-.searchToggle.active ~ .search-field {
-  bottom: -74px;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.search-field::before {
-  content: '';
-  position: absolute;
-  right: 14px;
-  top: -4px;
-  height: 12px;
-  width: 12px;
-  background-color: var(--nav-color);
-  transform: rotate(-45deg);
-  z-index: -1;
-}
-
-.search-field input {
-  height: 100%;
+.cartToggle a i{
   width: 100%;
-  padding: 0 45px 0 15px;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--search-text);
-  background-color: var(--search-bar);
-}
-
-
-.search-field i {
+  height: 100%;
+  line-height: 35px;
+  text-align: center;
   position: absolute;
-  color: var(--nav-color);
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
+  color: var(--text-color);
+  font-size: 28px;
 }
 
-#searchBox{
-  display: none;
+.cartToggle a:hover i{
+  transform: scale(1.1);
 }
 
 @media (max-width: 790px) {
@@ -279,10 +196,6 @@ nav .nav-bar .logo a {
   
   .nav-links li a::before{
     display: none;
-  }
-  
-  .search-field input{
-    z-index: 99;
   }
   
   nav .nav-bar .hamburger {
@@ -318,51 +231,5 @@ nav .nav-bar .logo a {
   .nav-links li a {
     display: block;
     border-bottom: 1px solid #eee;
-  }
-  
-  #searchBox{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-  }
-  
-  #searchBox .searchBlock{
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: var(--nav-color);
-    padding: 3px;
-    border-radius: 6px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .nav-links .searchBlock input{
-    height: 40px;
-    width: 100%;
-    margin-top: 5px;
-    padding: 0 45px 0 15px;
-    outline: none;
-    border: none;
-    border-radius: 2px;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--search-text);
-    background-color: var(--search-bar);
-  }
-  
-  .nav-links .searchBlock i{
-    position: absolute;
-    color: var(--nav-color);
-    right: 15px;
-    font-size: 22px;
-    cursor: pointer;
-    padding: 5px;
-  }
-  
-  .searchBox{
-    display: none;
   }
 }

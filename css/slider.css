@@ -1,5 +1,5 @@
 .banner{
-  margin-top: 70px;
+  margin-top: 45px;
 }
 
 .mySlides:before{
@@ -14,6 +14,7 @@
 
 .mySlides{
   display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .7);
 }
 
 .banner img{

@@ -1,12 +1,6 @@
 const hamburger = document.querySelector(".hamburger"),
-  navMenu = document.querySelector("nav"),
-  searchToggle = document.querySelector(".searchToggle");
-
-// ===== SEARCH TOGGLE =====
-searchToggle.addEventListener("click", () => {
-  searchToggle.classList.toggle("active");
-});
-
+  navMenu = document.querySelector("nav");
+  
 // ===== OPEN SIDEBAR MENU =====
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");

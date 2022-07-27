@@ -5,18 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mitha's Store</title>
+  <!-- ===== ICON ===== -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
   <!-- ===== CSS LINK ===== -->
-  <link rel="stylesheet" href="css/all.css"/>
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/slider.css">
-  
+  <link rel="stylesheet" href="css/all.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/slider.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+
   <!-- ==== BOXICONS CSS LINK ==== -->
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
-  
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" />
+
 </head>
 
 <body>
-  
+
   <!-- ===== NAVBAR SECTION ===== -->
   <header>
     <nav>
@@ -29,37 +34,20 @@
         <span class="logo navLogo"><a href="">Mitha's Store</a></span>
         <div class="menu">
           <ul class="nav-links">
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Kontak</a></li>
-            <div id="searchBox">
-              <div class="searchBlock">
-                <input type="text" placeholder="Cari aplikasi...">
-                <i class='bx bx-search'></i>
-              </div>
-            </div>
-          </ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
         </div>
-        <div class="cartToggle-searchBox">
-          <div class="cartToggle">
-            <i class='bx bx-cart-alt'></i>
-          </div>
-          <div class="searchBox">
-            <div class="searchToggle">
-              <i class='bx bx-x cancel'></i>
-              <i class='bx bx-search search'></i>
-            </div>
-            <div class="search-field">
-              <input type="text" placeholder="Cari aplikasi...">
-              <i class='bx bx-search'></i>
-            </div>
-          </div>
+        </ul>
+        <div class="cartToggle">
+          <a href="#"><i class='bx bx-cart-alt'></i></a>
         </div>
+      </div>
       </div>
     </nav>
   </header>
-  
-  
+
+
   <!-- ===== IMAGE SLIDER ===== -->
   <section class="banner">
     <div class="slideshow-container">
@@ -81,19 +69,239 @@
       <div class="mySlides fade">
         <img src="images/banner/banner6.jpg" style="width:100%">
       </div>
-      <div class="mySlides fade">
-        <img src="images/banner/banner7.jpeg" style="width:100%">
+    </div>
+  </section>
+
+
+  <!-- ===== TOP PRODUCT ===== -->
+  <section id="TopProduct">
+    <div class="titleSection">
+      <h2>Top <span>Product</span></h2>
+    </div>
+    <!--<div class="container">
+      <div class="card">
+        <div class="product-img">
+          <img src="images/logo/canva.png" alt="cnvprvt6bln" />
+        </div>
+        <div class="product-info">
+          <h4>Canva<br>Private 6 Bulan</h4>
+          <h4>Rp. 15,000</h4>
+        </div>
+        <div class="btn">
+          <button type="button"><a href="#">Order disini</a></button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product-img">
+          <img src="images/logo/netflix.png" alt="ntflxshr7hr" />
+        </div>
+        <div class="product-info">
+          <h4>Netflix<br>Sharing 7 Hari</h4>
+          <h4>Rp. 12,000</h4>
+        </div>
+        <div class="btn">
+          <button type="button"><a href="#">Order disini</a></button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product-img">
+          <img src="images/logo/vidio.png" alt="vdoshr1bln" />
+        </div>
+        <div class="product-info">
+          <h4>Vidio<br>Sharing 1 Bulan</h4>
+          <h4>Rp. 10,000</h4>
+        </div>
+        <div class="btn">
+          <button type="button"><a href="#">Order disini</a></button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product-img">
+          <img src="images/logo/yt.png" alt="ytfmpln2bln" />
+        </div>
+        <div class="product-info">
+          <h4>YouTube<br>Famplan 2 Bulan</h4>
+          <h4>Rp. 14,000</h4>
+        </div>
+        <div class="btn">
+          <button type="button"><a href="#">Order disini</a></button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product-img">
+          <img src="images/logo/wetv.png" alt="wetvshr1bln" />
+        </div>
+        <div class="product-info">
+          <h4>Wetv<br>Sharing 1 Bulan</h4>
+          <h4>Rp. 8,000</h4>
+        </div>
+        <div class="btn">
+          <button type="button"><a href="#">Order disini</a></button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product-img">
+          <img src="images/logo/spotify.png" alt="sptfyfmpln3bln" />
+        </div>
+        <div class="product-info">
+          <h4>Spotify<br>Famplan 3 Bulan</h4>
+          <h4>Rp. 25,000</h4>
+        </div>
+        <div class="btn">
+          <button type="button"><a href="#">Order disini</a></button>
+        </div>
+      </div>
+    </div>-->
+    <div class="wrapper">
+      <div class="slider-box">
+        <p class="category">Private</p>
+        <div class="img-box">
+          <img src="images/logo/canva.png" alt="Canva Private 6 bln">
+        </div>
+        <p class="detail">
+          Canva 6 Bulan
+          <span class="price">Rp. 15,000</span>
+        </p>
+        <div class="order">
+          <a data-modal-target=".modal-canva6bln">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="slider-box">
+        <p class="category">Sharing</p>
+        <div class="img-box">
+          <img src="images/logo/netflix.png" alt="Nexflix Sharing 7 hr">
+        </div>
+        <p class="detail">
+          Netflix 7 Hari
+          <span class="price">Rp. 12,000</span>
+        </p>
+        <div class="order">
+          <a data-modal-target=".modal">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="slider-box">
+        <p class="category">Sharing</p>
+        <div class="img-box">
+          <img src="images/logo/wetv.png" alt="Wetv Sharing 3 bln">
+        </div>
+        <p class="detail">
+          Sharing 3 Bulan
+          <span class="price">Rp. 15,000</span>
+        </p>
+        <div class="order">
+          <a data-modal-target=".modal">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="slider-box">
+        <p class="category">Private</p>
+        <div class="img-box">
+          <img src="images/logo/viu.png" alt="Viu Private 1 bln">
+        </div>
+        <p class="detail">
+          Viu 1 Bulan
+          <span class="price">Rp. 7,000</span>
+        </p>
+        <div class="order">
+          <a data-modal-target=".modal">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="slider-box">
+        <p class="category">Famplan</p>
+        <div class="img-box">
+          <img src="images/logo/yt.png" alt="Youtube Famplan 2 bln">
+        </div>
+        <p class="detail">
+          Youtube 2 Bulan
+          <span class="price">Rp. 10,000</span>
+        </p>
+        <div class="order">
+          <a data-modal-target=".modal">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="slider-box">
+        <p class="category">Famplan</p>
+        <div class="img-box">
+          <img src="images/logo/spotify.png" alt="Spotify Famplan 3 bln">
+        </div>
+        <p class="detail">
+          Spotify 3 Bulan
+          <span class="price">Rp. 25,000</span>
+        </p>
+        <div class="order">
+          <a data-modal-target=".modal">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="slider-box">
+        <div class="next-box">
+          <div class="next-btn">
+            <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
-  
-  
-  
-  <!-- ===== JAVASCRIPT SRC ===== -->
-  <script src="js/navbar.js"></script>
-  <script src="js/slider.js"></script>
-  
+
+
+  <!-- ===== MODAL PRODUCT ===== -->
+  <div class="modal-canva6bln" id="modal">
+    <div class="modal-nav">
+      <div class="back-btn">
+        <i class='bx bx-left-arrow-alt'></i>
+      </div>
+      <div class="brand">
+        <span class="logo navLogo"><a href="">Mitha's Store</a></span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="body">
+        <!-- card left -->
+        <div class="product-imgs">
+            <div class="img-display">
+              <img src="images/logo/canva.png" alt="Canva 6 bln">
+          </div>
+        </div>
+        <!-- card right -->
+        <div class="product-content">
+          <h2 class="product-title">Canva 6 Bulan</h2>
+          <a href="#" class="product-link">Private</a>
+
+          <div class="product-price">
+            <p class="new-price">Price: <span>Rp. 15,000</span></p>
+          </div>
+
+          <div class="product-detail">
+            <h2>Tentang produk ini: </h2>
+            <p>Kategori PRIVATE yaitu akun yang hanya digunakan sendiri.</p>
+            <p>Cara order :</p>
+            <ol>
+              <li>Pilih produk yang akan dibeli,</li>
+              <li>Pastikan produk yang akan dibeli sesuai dengan keinginan anda,</li>
+              <li>Jika sudah benar silahkan klik tombol Order Disini yang ada dibawah,</li>
+              <li>Kemudian isikan from pembelian dengan benar,</li>
+              <li>Tunggu sampai kami menghubungi anda melalui WhatsApp.</li>
+            </ol>
+            <p>Catatan: Jika ada masalah silahkan lapor ke <a href="">sini.</a></p>
+            <ul>
+              <li>Durasi: <span>6 Bulan</span></li>
+              <li>Kategori: <span>Private</span></li>
+            </ul>
+          </div>
+
+          <div class="purchase-info">
+            <button type="button" class="btn">
+              Order Disini <i class="bx bx-cart-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ===== JAVASCRIPT SRC ===== -->
+    <script src="js/navbar.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/modal.js"></script>
+
 </body>
 
 </html>
