@@ -189,22 +189,20 @@
 }
 
 .purchase-info .btn {
-  border: 1.5px solid #ddd;
   border-radius: 25px;
   text-align: center;
   padding: 0.45rem 0.8rem;
   outline: 0;
   margin-right: 0.2rem;
   margin-bottom: 1rem;
-}
-
-.purchase-info .btn {
   cursor: pointer;
   color: var(--text-color);
+  text-decoration: none;
+  background: var(--nav-color);
 }
 
-.purchase-info .btn{
-  background: var(--nav-color);
+.purchase-info .btn i{
+  font-size: 1.22rem;
 }
 
 .purchase-info .btn:hover {

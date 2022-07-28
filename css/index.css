@@ -89,6 +89,11 @@
   line-height: 45px;
 }
 
+.order a:hover{
+  color: var(--text-color);
+  transform: scale(1.1);
+}
+
 .next-box{
   align-items: center;
   justify-content: center;
