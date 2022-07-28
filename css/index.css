@@ -1,84 +1,4 @@
-
-#TopProduct {
-  margin: 10px;
-}
-
-/*
-.container{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.container .card{
-  width: 210px;
-  overflow: hidden;
-  border: 1px solid var(--nav-color);
-  border-radius: 15px;
-  text-align: center;
-  background-color: #fff;
-  margin: 10px 5px;
-}
-
-
-.container .card:hover{
-  box-shadow: 0 0 7px rgba(0,0,0, 0.3);
-}
-
-.container .card .product-img{
-  width: 170px;
-  margin: 10px auto;
-}
-
-.container .card .product-img img{
-  width: 100%;
-}
-
-.container .card .product-info{
-  font-size: 14px;
-  padding: 0 20px;
-  margin-bottom: 10px;
-}
-.container .card .info{
-  width: 100%;
-}
-
-.container .card .btn button{
-  width: 100%;
-  padding: 10px;
-  background: var(--nav-color);
-  border-top: 1px solid #ddd;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.container .card .btn button a{
-  text-decoration: none;
-  font-size: 20px;
-  color: var(--text-color);
-}
-
-
-/* ===== RESPONSIVE ===== 
-@media screen and (max-width: 768px){
-  .container .card{
-    width: 140px;
-  }
-  
-  .container .card .product-img{
-    width: 100px;
-  }
-  
-  .container .card .btn button a{
-    font-size: 14px;
-  }
-}
-*/
+/* ===== PRODUCT SECTION =====*/
 .wrapper{
   display: flex;
   overflow-x: auto;
@@ -130,6 +50,7 @@
   right: 20px;
   color: crimson;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif;
 }
 
 .detail{
@@ -140,10 +61,12 @@
   font-size: 20px;
   font-weight: bold;
   line-height: 35px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .detail .price{
   font-weight: normal;
+  font-family: 'Nunito', sans-serif;
 }
 
 .order{
@@ -225,5 +148,44 @@
   .next-box .next-btn a i{
     font-size: 30px;
     line-height: 70px;
+  }
+}
+
+/* ===== BANTUAN SECTION =====*/
+.Bantuan ul{
+  margin-left: 15px;
+}
+
+.Bantuan ul li{
+  margin-top: 10px;
+}
+
+.Bantuan ol li{
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+.Bantuan{
+  margin-top: 10px;
+  font-weight: 400;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.Bantuan h3{
+  font-weight: 700;
+}
+
+.Bantuan .Feedback{
+  margin-top: 10px;
+} 
+
+@media screen and (max-width: 768px){
+  .Bantuan{
+    font-size: 14px;
+  }
+  
+  .Bantuan ol li{
+    margin-left: 15px;
   }
 }

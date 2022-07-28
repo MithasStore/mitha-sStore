@@ -67,6 +67,7 @@
   color: var(--text-color);
   text-decoration: none;
   pointer-events: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 .modal-body {
@@ -99,6 +100,7 @@
   position: relative;
   color: #12263a;
   margin: 1rem 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .product-title::after {
