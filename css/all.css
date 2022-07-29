@@ -43,11 +43,11 @@ section {
   margin: 10px;
 }
 
-section a{
+a{
   color: var(--nav-color);
 }
 
-section a:hover{
+a:hover{
   color: crimson;
 }
 
